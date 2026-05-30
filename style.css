@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+/* body::-webkit-scrollbar{
+    display: none;
+    scrollbar-gutter: stable;
+} */
+
+main {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4% 46% 12% 4.6% 29.4% 4%;
+    grid-template-rows: 11vh 12vh 32vh 16vh 104vh 104vh 21vh;
+    ;
+    grid-template-areas:
+        "nav nav nav nav nav nav"
+        "header-left header-center header-center header-center header-center header-right"
+        "info-left info-center1 info-center1 info-center2 info-center3 info-right"
+        "contact-left contact-center contact-center contact-center contact-center contact-right"
+        "work-left work-center work-center work-center work-center work-right"
+        "about-left about-left about-right about-right about-right about-right"
+        "about-bottom about-bottom about-bottom about-bottom about-bottom about-bottom";
+
+}
+
+.sections {
+    border: 1px solid black;
+    background-color: wheat;
+}
+
+.nav {
+    background-color: lightgray;
+    grid-area: nav;
+}
+
+.header-left {
+    background-color: lightblue;
+    grid-area: header-left;
+
+}
+
+.header-right {
+    background-color: lightcoral;
+    grid-area: header-right;
+}
+
+.header-center {
+    background-color: lightgreen;
+    grid-area: header-center;
+}
+
+.info-left {
+    background-color: lightpink;
+    grid-area: info-left;
+}
+
+.info-right {
+    background-color: lightgray;
+    grid-area: info-right;
+}
+
+.info-center1 {
+    background-color: lightyellow;
+    grid-area: info-center1;
+}
+
+.info-center2 {
+    background-color: lightcyan;
+    grid-area: info-center2;
+}
+
+.info-center3 {
+    background-color: lightsteelblue;
+    grid-area: info-center3;
+}
+
+.contact-left {
+    background-color: lightgoldenrodyellow;
+    grid-area: contact-left;
+}
+
+.contact-right {
+    background-color: lightseagreen;
+    grid-area: contact-right;
+}
+
+.contact-center {
+    background-color: lightsteelblue;
+    grid-area: contact-center;
+}
+
+.work-left {
+    background-color: lightcoral;
+    grid-area: work-left;
+}
+
+.work-right {
+    background-color: lightblue;
+    grid-area: work-right;
+}
+
+.work-center {
+    background-color: lightgreen;
+    grid-area: work-center;
+}
+
+.about-left {
+    background-color: lightpink;
+    grid-area: about-left;
+}
+
+.about-right {
+    background-color: lightgray;
+    grid-area: about-right;
+}
+
+.about-bottom {
+    background-color: lightyellow;
+    grid-area: about-bottom;
+}
+
+
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: 5% 46% 6% 8.5% 29.5% 5%;
+        grid-template-rows: 12.5vh 9.5vh 31vh 34.5vh 16vh 104vh 104vh 16vh;
+        grid-template-areas:
+            "nav nav nav nav nav nav"
+            "header-left header-center header-center header-center header-center header-right"
+            "work-left info-center1 info-center1 info-center1 info-center1 work-right"
+            "info-left info-center2 info-center2 info-center3 info-center3 info-right"
+            "contact-left contact-center contact-center contact-center contact-center contact-right"
+            "contact-left work-center work-center work-center work-center contact-right"
+            "about-left about-left about-right about-right about-right about-right"
+            "about-bottom about-bottom about-bottom about-bottom about-bottom about-bottom";
+    }
+}
+
+
+@media (max-width: 767px) {
+    main {
+        grid-template-columns: 3.5% 46.5% 7% 9.5% 29.5% 3.5%;
+        grid-template-rows: 13vh 10vh 13vh 32vh 80vh 80vh 16vh;
+        grid-template-areas:
+            "nav nav nav nav nav nav"
+            "header-left header-center header-center header-center header-center header-right"
+            "work-left info-center1 info-center1 info-center1 info-center1 work-right"
+            /* "info-left info-center2 info-center2 info-center3 info-center3 info-right" */
+            "contact-left contact-center contact-center contact-center contact-center contact-right"
+            "contact-left work-center work-center work-center work-center contact-right"
+            "about-left about-left about-left about-left about-left about-left"
+            "about-bottom about-bottom about-bottom about-bottom about-bottom about-bottom";
+    }
+}
+
+@media (max-width: 410px) {
+
+    main {
+        grid-template-columns: 4% 48% 6% 8.5% 29.5% 4%;
+        grid-template-rows: 11.5vh 9.5vh 12vh 25.5vh 104vh 104vh 16vh;
+        grid-template-areas:
+            "nav nav nav nav nav nav"
+            "header-left header-center header-center header-center header-center header-right"
+            "work-left info-center1 info-center1 info-center1 info-center1 work-right"
+            /* "info-left info-center2 info-center2 info-center3 info-center3 info-right" */
+            "contact-left contact-center contact-center contact-center contact-center contact-right"
+            "contact-left work-center work-center work-center work-center contact-right"
+            "about-left about-left about-left about-left about-left about-left"
+            "about-bottom about-bottom about-bottom about-bottom about-bottom about-bottom";
+    }
+
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+}
