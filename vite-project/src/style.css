@@ -1,3 +1,19 @@
+@font-face {
+    font-family: "font1";
+    src: url("./assets/fonts/font1.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "font2";
+    src: url("./assets/fonts/font2.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "font3";
+    src: url("./assets/fonts/font3.woff2") format("truetype");
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +25,7 @@ body {
     min-height: 100vh;
     width: 100%;
 }
+
 /* body::-webkit-scrollbar{
     display: none;
     scrollbar-gutter: stable;
@@ -34,98 +51,131 @@ main {
 }
 
 .sections {
-    border: 1px solid black;
-    background-color: wheat;
+    border: 0.2px solid rgb(226 218 203);
+    background-color: rgb(242 235 225);
 }
 
 .nav {
-    background-color: lightgray;
+    padding: 1rem 4rem;
     grid-area: nav;
+    display: flex;
+    justify-content: space-between;
 }
 
+.navsection {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navsection h2 {
+    font-size: 1.8rem;
+    font-family: "font1";
+    font-weight: 500;
+}
+
+.navsection img {
+    height: 30px;
+    width: 27px;
+}
+
+
+.navright {
+    padding: 10px 19px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navright h4 {
+    border-radius: 4px;
+    padding: 14px 20px;
+    background-color: rgb(5, 5, 5);
+    color: white;
+}
+
+.navright img {
+    display: hidden;
+    padding: 8px;
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid black;
+    height: 47px;
+    width: 47px;
+}
+
+
 .header-left {
-    background-color: lightblue;
     grid-area: header-left;
 
 }
 
 .header-right {
-    background-color: lightcoral;
     grid-area: header-right;
 }
 
 .header-center {
-    background-color: lightgreen;
     grid-area: header-center;
 }
 
 .info-left {
-    background-color: lightpink;
     grid-area: info-left;
 }
 
 .info-right {
-    background-color: lightgray;
     grid-area: info-right;
 }
 
 .info-center1 {
-    background-color: lightyellow;
+
     grid-area: info-center1;
 }
 
 .info-center2 {
-    background-color: lightcyan;
     grid-area: info-center2;
 }
 
 .info-center3 {
-    background-color: lightsteelblue;
+    
     grid-area: info-center3;
 }
 
 .contact-left {
-    background-color: lightgoldenrodyellow;
+   
     grid-area: contact-left;
 }
 
 .contact-right {
-    background-color: lightseagreen;
+   
     grid-area: contact-right;
 }
 
 .contact-center {
-    background-color: lightsteelblue;
+  
     grid-area: contact-center;
 }
 
 .work-left {
-    background-color: lightcoral;
     grid-area: work-left;
 }
 
 .work-right {
-    background-color: lightblue;
     grid-area: work-right;
 }
 
 .work-center {
-    background-color: lightgreen;
     grid-area: work-center;
 }
 
 .about-left {
-    background-color: lightpink;
     grid-area: about-left;
 }
 
 .about-right {
-    background-color: lightgray;
     grid-area: about-right;
 }
 
 .about-bottom {
-    background-color: lightyellow;
     grid-area: about-bottom;
 }
 
@@ -179,9 +229,51 @@ main {
             "about-bottom about-bottom about-bottom about-bottom about-bottom about-bottom";
     }
 
+    .navright h4 {
+        display: none;
+        border-radius: 4px;
+        padding: 14px 20px;
+        background-color: rgb(5, 5, 5);
+        color: white;
+    }
+
     .nav {
+        padding: 1rem 0rem;
+        grid-area: nav;
+        display: flex;
+        justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 1000;
+    }
+
+
+
+    .navright img {
+        display: block;
+        padding: 8px;
+        background-color: white;
+        border-radius: 50%;
+        border: 4px solid black;
+        height: 47px;
+        width: 47px;
+    }
+
+    .navsection {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .navsection h2 {
+        font-size: 1.9rem;
+        font-family: "font1";
+        font-weight: 500;
+    }
+
+    .navsection img {
+        height: 30px;
+        width: 27px;
     }
 }
